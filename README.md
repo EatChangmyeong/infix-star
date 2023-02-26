@@ -2,7 +2,7 @@
 
 All documented `infix` operators visible in `base`, organized into a table.
 
-This webpage is different from other "operators cheat sheet" in that it includes *all* operators declared as `infix`, not just ones from `Prelude`.
+This webpage is different from other "Haskell operators cheat sheet" in that it includes *all* operators declared as `infix`, not just ones from `Prelude`.
 
 ## What are those `.replit` files?
 
