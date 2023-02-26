@@ -23,8 +23,9 @@
 
     const
       modEscaped = mod.replace(/\./g, '-'),
-      escaped = entry.name.replace(/\W/g, x => `-${x.codePointAt(0)}-`);
-    return `https://hackage.haskell.org/package/${pack}-${version}/docs/${modEscaped}.html#v:${escaped}`;
+      escaped = entry.name.replace(/[^\w:]/g, x => `-${x.codePointAt(0)}-`)
+      indexType = entry.decltype ? 't' : 'v';
+    return `https://hackage.haskell.org/package/${pack}-${version}/docs/${modEscaped}.html#${indexType}:${escaped}`;
   }
   function getSrcLink(entry: Entry): string {
     const mod = entry.defined;
