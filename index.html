@@ -2,12 +2,82 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <base target="_blank">
+		<link rel="icon" href="https://eatch.dev/ei/c/0_0_f" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Svelte + TS + Vite App</title>
+    <title>| infix * |</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono&family=Noto+Serif:ital@1&display=swap');
+      
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0.5rem;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+      }
+      
+      #top-bar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 6rem;
+        background-image: linear-gradient(to bottom,
+          #ffffff,
+          #ffffffcc 80%,
+          transparent
+        );
+        z-index: 2;
+      }
+      #top-bar + img {
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        width: 4rem;
+        height: 4rem;
+        z-index: 3;
+      }
+
+      h1 {
+        margin: 7rem auto 1rem;
+        border: solid black;
+        border-width: 0 2px;
+        padding: 0.25em 0.4em;
+        width: fit-content;
+        font-family: 'Noto Sans Mono', monospace;
+        font-weight: normal;
+        font-style: normal;
+      }
+      #table {
+        width: 100%;
+        overflow: auto;
+      }
+
+      code {
+        margin: 0 -0.1em;
+        padding: 0 0.1em;
+        background-color: #dddddd80;
+        font-family: 'Noto Sans Mono', monospace;
+        font-style: normal;
+      }
+      .sans {
+        font-family: 'Noto Sans', sans-serif;
+        font-style: normal;
+      }
+      .small {
+        font-size: 0.8em;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+		<div id="top-bar"></div>
+		<img src="https://eatch.dev/ei/_0" alt="">
+    <h1>infix *</h1>
+    <p>All documented <code>infix</code> operators visible in <code>base</code></p>
+    <div id="table"></div>
+    <p class="small sans">All data was manually retrieved and inserted from <code><a href="https://hackage.haskell.org/package/base-4.17.0.0">base-4.17.0.0</a></code> and <code><a href="https://hackage.haskell.org/package/ghc-prim-0.9.0">ghc-prim-0.9.0</a></code></p>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

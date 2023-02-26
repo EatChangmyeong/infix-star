@@ -1,7 +1,7 @@
-import App from './App.svelte'
+import Table from './Table.svelte';
 
-const app = new App({
-  target: document.getElementById('app')
-})
+const app = new Table({
+  target: document.getElementById('table'),
+});
 
-export default app
+export default app;
