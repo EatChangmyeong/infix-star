@@ -52,7 +52,7 @@
     {/each}
   </p>
   {/if}
-  <p class="small">Links are auto-generated and have chances to be broken.</p>
+  <p class="small sans">Links are auto-generated and have chances to be broken.</p>
 </div>
 
 <style>
