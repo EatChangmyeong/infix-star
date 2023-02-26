@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { selected as selectedStore } from './Table.svelte';
   import DocLink from './DocLink.svelte';
   import closeImg from './close.svg';
@@ -20,6 +21,11 @@
     entry.name[0] == '_'
   );
   $: visible = entry.visible.filter(x => x !== '_');
+
+  onMount(() => {
+     document.body.classList.add('margin');
+    return () => document.body.classList.remove('margin');
+  });
 </script>
 
 <input type="image" id="close" alt="close" src={closeImg} on:click|preventDefault={() => $selectedStore = undefined}>

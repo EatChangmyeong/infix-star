@@ -12,7 +12,7 @@
   const indexedTable = table.map((x, i) => [i - 1, x]).reverse();
 </script>
 
-<table class:margin={!!$selected}>
+<table>
   <thead>
     <tr>
       <th></th>
@@ -47,9 +47,6 @@
   table {
     margin: 0 auto;
     border-collapse: collapse;
-  }
-  table.margin {
-    margin-bottom: calc(100vh / 3);
   }
   th {
     border: 1px solid #fff;
