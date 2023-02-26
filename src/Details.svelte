@@ -1,6 +1,7 @@
 <script lang="ts">
   import { selected as selectedStore } from './Table.svelte';
   import DocLink from './DocLink.svelte';
+  import closeImg from './close.svg';
   import type { Entry } from './table.ts';
   export let selected: [number, number, Entry];
   
@@ -21,7 +22,7 @@
   $: visible = entry.visible.filter(x => x !== '_');
 </script>
 
-<input type="image" id="close" alt="close" src="/close.svg" on:click|preventDefault={() => $selectedStore = undefined}>
+<input type="image" id="close" alt="close" src={closeImg} on:click|preventDefault={() => $selectedStore = undefined}>
 <div id="details">
   <p>
     <code class="small">{fixity}</code>
